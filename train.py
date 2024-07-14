@@ -228,7 +228,7 @@ class SpeechParser(sb.Brain):
                 with open(self.hparams.wer_file, "w") as w:
                     self.wer_metric.write_stats(w)
                 # save pos_stat to file
-                analysis_dir = f"{hparams.output_folder}/analysis"
+                analysis_dir = f"{self.hparams.output_folder}/analysis"
                 os.makedirs(analysis_dir, exist_ok=True)
                 for pos, stat in pos_stat.items():
                     filename = f"{pos}_HEAD"

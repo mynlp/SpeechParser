@@ -299,9 +299,9 @@ class TreeEvaluator:
         subargs = subparser.parse_args([gold_path, predicted_path, path_sgml + "_sorted"])
 
         # Evaluate
-        evaluation = conll18.evaluate_wrapper(subargs, analysis)
+        evaluation, pos_stat, uas_list = conll18.evaluate_wrapper(subargs, analysis)
         uas = 100 * evaluation["UAS"].f1
         las = 100 * evaluation["LAS"].f1
 
         print(repr(round(uas, 2)) + "\t" + repr(round(las, 2)))
-        return evaluation
+        return evaluation, pos_stat, uas_list
