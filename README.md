@@ -1,6 +1,8 @@
 # Textless Dependency Parsing by Labeled Sequence Prediction
 
-- Paper URL: TBD
+## Paper URL
+
+- https://arxiv.org/abs/2407.10118
 
 ## Setup Environment
 
